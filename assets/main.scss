@@ -1,0 +1,537 @@
+@import './scss/color.scss';
+@import './scss/animation.scss';
+
+
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("./fonts/Montserrat-Medium.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("./fonts/Montserrat-Regular.otf");
+  font-weight: normal;
+}
+
+.Montserrat-Medium {
+  font-family: Montserrat-Medium;
+
+
+}
+
+.Montserrat-Regular {
+  font-family: Montserrat-Regular;
+
+
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #67b68c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #67b68c;
+}
+
+html {
+  overflow: auto;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Montserrat-Regular;
+  min-height: 100vh;
+  background: #faf8f1;
+
+}
+
+.dir-rtl{
+  direction: rtl;
+
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: #faf8f1;
+
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+a:hover{
+  text-decoration: none;
+  color: #424242;
+}
+
+p,
+a,
+span,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+textarea,
+input {
+  font-family: Montserrat-Regular;
+}
+
+.disabled:hover {
+  cursor: unset;
+}
+
+.list-style-none {
+  list-style-type: none;
+}
+
+
+.filter-balckandwhite {
+  filter: grayscale(100%);
+}
+
+.filter-hue {
+  filter: hue-rotate(180deg);
+}
+
+.social {
+  .nav-item svg {
+    font-size: 18px !important;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+
+    letter-spacing: normal;
+    text-align: center;
+    color: #424242 !important;
+  }
+}
+
+
+.param {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.param-xs {
+  font-size: 10px;
+}
+
+.param-sm {
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+
+  letter-spacing: normal;
+}
+
+.font-weight-bolder {
+  font-weight: 900;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.param-sm-light {
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+
+  letter-spacing: normal;
+}
+
+.param-md {
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+.param-md-light {
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+
+  letter-spacing: 1.5px;
+}
+
+.param-lg {
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+
+  letter-spacing: normal;
+}
+
+.vue-typer {
+  color: #67b68c !important;
+  min-width: 184px !important;
+  display: inline-block;
+  text-align: center;
+
+  span {
+    color: #67b68c !important;
+  }
+}
+
+.param-lg-bold {
+  font-size: 20px;
+  font-stretch: normal;
+  font-style: normal;
+
+  letter-spacing: normal;
+  font-weight: bold;
+}
+
+.param-md-bold {
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+
+  letter-spacing: normal;
+}
+
+.param-xl {
+  font-size: 22px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+
+  letter-spacing: normal;
+}
+
+.title-md {
+  font-size: 36px;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+.title-lg {
+  font-style: normal;
+  font-size: 42px;
+}
+
+.param-18 {
+  font-size: 18px;
+}
+
+.title-sm {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.poiner-event:hover {
+  cursor: pointer;
+}
+
+
+
+
+@media (min-width: 1281px) {
+  //CSS
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  //CSS
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .param {
+    font-size: 12px;
+  }
+
+  .param-sm {
+    font-size: 10px;
+  }
+
+  .param-sm-light {
+    font-size: 12px;
+  }
+
+  .param-md {
+    font-size: 12px;
+  }
+
+  .param-18 {
+    font-size: 14px;
+  }
+
+  .param-md-light {
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+
+    letter-spacing: 1.5px;
+  }
+
+  .param-lg {
+    font-size: 14px;
+  }
+
+  .vue-typer {
+    span {
+      font-size: 15px;
+    }
+  }
+
+  .param-lg-bold {
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+
+    letter-spacing: normal;
+    font-weight: bold;
+  }
+
+  .param-md-bold {
+    font-size: 14px;
+  }
+
+  .param-xl {
+    font-size: 15px;
+  }
+
+  .title-md {
+    font-size: 20px;
+  }
+
+  .title-lg {
+    font-style: normal;
+    font-size: 22px;
+  }
+
+  .title-sm {
+    font-size: 15px;
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+//CSS
+
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .headers.container .navbar-nav {
+    .form-inline {
+      justify-content: flex-end;
+    }
+  }
+
+  .param {
+    font-size: 12px;
+  }
+
+  .param-sm {
+    font-size: 10px;
+  }
+
+  .param-sm-light {
+    font-size: 12px;
+  }
+
+  .param-md {
+    font-size: 12px;
+  }
+
+  .param-md-light {
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+
+    letter-spacing: 1.5px;
+  }
+
+  .param-lg {
+    font-size: 14px;
+  }
+
+  .vue-typer {
+    color: #67b68c !important;
+    min-width: 88px !important;
+    display: inline-block;
+    text-align: center;
+
+    span {
+      color: #67b68c !important;
+      font-size: 13px;
+    }
+  }
+
+  .param-lg-bold {
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+
+    letter-spacing: normal;
+    font-weight: bold;
+  }
+
+  .param-md-bold {
+    font-size: 14px;
+  }
+
+  .param-xl {
+    font-size: 16px;
+  }
+
+  .dir-rtl {
+    direction: rtl;
+  }
+
+  .title-md {
+    font-size: 16px;
+  }
+
+  .title-lg {
+    font-style: normal;
+    font-size: 18px;
+  }
+
+  .title-sm {
+    font-size: 16px;
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 100px) and (max-width: 768px) {
+
+
+  .param {
+    font-size: 12px;
+  }
+
+  .param-sm {
+    font-size: 10px;
+  }
+
+  .param-sm-light {
+    font-size: 12px;
+  }
+
+  .param-md {
+    font-size: 12px;
+  }
+
+  .param-18 {
+    font-size: 14px;
+  }
+
+  .param-md-light {
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+
+    letter-spacing: 1.5px;
+  }
+
+  .param-lg {
+    font-size: 14px;
+  }
+
+  .vue-typer {
+    color: #67b68c !important;
+    min-width: 88px !important;
+    display: inline-block;
+    text-align: center;
+
+    span {
+      color: #67b68c !important;
+      font-size: 13px;
+    }
+  }
+
+  .param-lg-bold {
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+
+    letter-spacing: normal;
+    font-weight: bold;
+  }
+
+  .param-md-bold {
+    font-size: 14px;
+  }
+
+  .param-xl {
+    font-size: 16px;
+  }
+
+  .title-md {
+    font-size: 16px;
+  }
+
+  .title-lg {
+    font-style: normal;
+    font-size: 18px;
+  }
+
+  .title-sm {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {}

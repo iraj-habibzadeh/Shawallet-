@@ -1,0 +1,23 @@
+{
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  },
+  "Lang": {
+    "description": "Auto imported from components/Lang.vue"
+  },
+  "SideBar": {
+    "description": "Auto imported from components/SideBar.vue"
+  },
+  "Socials": {
+    "description": "Auto imported from components/Socials.vue"
+  },
+  "FontAwsomeFab": {
+    "description": "Auto imported from components/font-awsome/Fab.vue"
+  },
+  "FontAwsomeFas": {
+    "description": "Auto imported from components/font-awsome/Fas.vue"
+  }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "bridge___en",
+    "path": "/bridge",
+    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\bridge.vue",
+    "chunkName": "pages/bridge",
+    "_name": "_5e1f6182"
+  },
+  {
+    "name": "buyAndSell___en",
+    "path": "/buyAndSell",
+    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\buyAndSell.vue",
+    "chunkName": "pages/buyAndSell",
+    "_name": "_a7b6ffce"
+  },
+  {
+    "name": "index___fa",
+    "path": "/fa",
+    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_6f25110c"
+  },
+  {
+    "name": "profile___en",
+    "path": "/profile",
+    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\profile.vue",
+    "chunkName": "pages/profile",
+    "_name": "_339d0de3"
+  },
+  {
+    "name": "bridge___fa",
+    "path": "/fa/bridge",
+    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\bridge.vue",
+    "chunkName": "pages/bridge",
+    "_name": "_5e1f6182"
+  },
+  {
+    "name": "buyAndSell___fa",
+    "path": "/fa/buyAndSell",
+    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\buyAndSell.vue",
+    "chunkName": "pages/buyAndSell",
+    "_name": "_a7b6ffce"
+  },
+  {
+    "name": "profile___fa",
+    "path": "/fa/profile",
+    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\profile.vue",
+    "chunkName": "pages/profile",
+    "_name": "_339d0de3"
+  },
+  {
+    "name": "index___en",
+    "path": "/",
+    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_6f25110c"
+  }
+]
