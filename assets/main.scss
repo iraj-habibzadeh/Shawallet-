@@ -2,6 +2,11 @@
 @import './scss/animation.scss';
 
 
+@font-face {
+  font-family: Monoton;
+  src: url("./fonts/Monoton.ttf");
+  font-weight: normal;
+}
 
 @font-face {
   font-family: Montserrat-Medium;
@@ -58,19 +63,40 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: Montserrat-Regular;
-  min-height: 100vh;
   background: #faf8f1;
 
 }
 
-.dir-rtl{
+.dir-rtl {
   direction: rtl;
 
 }
+
 body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  background: #faf8f1;
+  min-height: 100vh;
+
+}
+.bg-glass{
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  box-shadow: rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+}
+coingecko-coin-price-marquee-widget{
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  box-shadow: rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+}
+.sha-wrapper {
+  height: 77vh;
+  overflow-y: scroll;
   background: #faf8f1;
 
 }
@@ -84,14 +110,18 @@ body {
 .page-leave-to {
   opacity: 0;
 }
-
+*{
+  border:none;
+}
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
+
 }
-a:hover{
+
+a:hover {
   text-decoration: none;
   color: #424242;
 }
@@ -109,6 +139,9 @@ h6,
 textarea,
 input {
   font-family: Montserrat-Regular;
+}
+
+.div,iframe, {
 }
 
 .disabled:hover {
@@ -141,7 +174,9 @@ input {
   }
 }
 
-
+.wrapper{
+  font-family: Monoton;
+}
 .param {
   font-size: 14px;
   font-weight: 500;
@@ -263,8 +298,6 @@ input {
 .poiner-event:hover {
   cursor: pointer;
 }
-
-
 
 
 @media (min-width: 1281px) {
@@ -534,4 +567,5 @@ input {
   }
 }
 
-@media (max-width: 320px) {}
+@media (max-width: 320px) {
+}

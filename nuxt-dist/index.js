@@ -5,7 +5,7 @@ import ClientOnly from 'vue-client-only'
 import NoSsr from 'vue-no-ssr'
 import { createRouter } from './router.js'
 import NuxtChild from './components/nuxt-child.js'
-import NuxtError from '..\\layouts\\error.vue'
+import NuxtError from '../layouts/error.vue'
 import Nuxt from './components/nuxt.js'
 import App from './App.js'
 import { setContext, getLocation, getRouteData, normalizeError } from './utils'
@@ -13,17 +13,15 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_4d3611ca from 'nuxt_plugin_plugin_4d3611ca' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_bootstrapvue_a97bf3c8 from 'nuxt_plugin_bootstrapvue_a97bf3c8' // Source: .\\bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_pluginutils_85ca3dbe from 'nuxt_plugin_pluginutils_85ca3dbe' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
-import nuxt_plugin_pluginseo_3cb2a8b5 from 'nuxt_plugin_pluginseo_3cb2a8b5' // Source: .\\nuxt-i18n\\plugin.seo.js (mode: 'all')
-import nuxt_plugin_pluginrouting_d030aba8 from 'nuxt_plugin_pluginrouting_d030aba8' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
-import nuxt_plugin_pluginmain_153150c3 from 'nuxt_plugin_pluginmain_153150c3' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
-import nuxt_plugin_workbox_25bd52c9 from 'nuxt_plugin_workbox_25bd52c9' // Source: .\\workbox.js (mode: 'client')
-import nuxt_plugin_metaplugin_0a1d236e from 'nuxt_plugin_metaplugin_0a1d236e' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
-import nuxt_plugin_iconplugin_00cdd886 from 'nuxt_plugin_iconplugin_00cdd886' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
-import nuxt_plugin_axios_d21b3626 from 'nuxt_plugin_axios_d21b3626' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_web3_276f1281 from 'nuxt_plugin_web3_276f1281' // Source: ..\\plugins\\web3.js (mode: 'client')
+import nuxt_plugin_plugin_ccc4d3e8 from 'nuxt_plugin_plugin_ccc4d3e8' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_0057e15e from 'nuxt_plugin_bootstrapvue_0057e15e' // Source: ./bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_pluginutils_2359394e from 'nuxt_plugin_pluginutils_2359394e' // Source: ./nuxt-i18n/plugin.utils.js (mode: 'all')
+import nuxt_plugin_pluginrouting_5d087e64 from 'nuxt_plugin_pluginrouting_5d087e64' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
+import nuxt_plugin_pluginmain_0643a78b from 'nuxt_plugin_pluginmain_0643a78b' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
+import nuxt_plugin_workbox_2e07a7be from 'nuxt_plugin_workbox_2e07a7be' // Source: ./workbox.js (mode: 'client')
+import nuxt_plugin_metaplugin_b0d75e5e from 'nuxt_plugin_metaplugin_b0d75e5e' // Source: ./pwa/meta.plugin.js (mode: 'all')
+import nuxt_plugin_iconplugin_a7881376 from 'nuxt_plugin_iconplugin_a7881376' // Source: ./pwa/icon.plugin.js (mode: 'all')
+import nuxt_plugin_axios_bf7119bc from 'nuxt_plugin_axios_bf7119bc' // Source: ./axios.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -88,7 +86,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"ShaWallet | Smart Wallet For Buy And Sell CryptoCurrncy On WEB3 ","meta":[{"charset":"utf-8"},{"hid":"content","name":"content","content":"ShaWallet website content"},{"hid":"robots","name":"robots","content":"width=device-width, initial-scale=1"},{"hid":"msapplication-TileColor","name":"msapplication-TileColor","content":"#ffffff"},{"hid":"theme-color","name":"theme-color","content":"#67B68C"},{"hid":"description","name":"description","content":"Plant a forest and support rural communities worldwide. ShaWallet uses Web3 to unlock new opportunities in Climate Finance."},{"hid":"og:type","property":"og:type","content":"website"},{"hid":"og:site_name","property":"og:site_name","content":"ShaWallet"},{"hid":"og:title","property":"og:title","content":"ShaWallet | Planters Without Borders"},{"hid":"og:description","name":"og:description","content":"Plant a forest and support rural communities worldwide. ShaWallet uses Web3 to unlock new opportunities in Climate Finance."},{"hid":"og:url","property":"og:url","content":"https:\u002F\u002FShaWallet.com"},{"hid":"og:image","property":"og:image","content":"https:\u002F\u002FShaWallet.com\u002FfeatureImage\u002Fjake-hills.jpg"},{"hid":"twitter:card","property":"twitter:card","content":"summary_large_image"},{"hid":"twitter:title","property":"twitter:title","content":"ShaWallet | Planters Without Borders"},{"hid":"og:locale:alternate","property":"og:locale:alternate","content":"en"}],"link":[],"style":[],"script":[]},
+    head: {"title":"ShaWallet | Smart Wallet For Buy And Sell CryptoCurrncy On WEB3 ","meta":[{"charset":"utf-8"},{"hid":"content","name":"content","content":"ShaWallet website content"},{"hid":"robots","name":"robots","content":"width=device-width, initial-scale=1"},{"hid":"msapplication-TileColor","name":"msapplication-TileColor","content":"#FAF8F1"},{"hid":"theme-color","name":"theme-color","content":"#FAF8F1"},{"hid":"keywords","name":"keywords","content":"SHA_WALLET,wallet,cryptocurrency,exchange,sha_walet,web3,"},{"hid":"description","name":"description","content":"SHA_WALLET is a secure and user-friendly cryptocurrency wallet and exchange platform. Buy and sell various cryptocurrencies with ease using SHA_WALLET's web3 integration and enjoy the benefits of a reliable and efficient trading experience. Start trading today!,SHA_WALLET is a secure and user-friendly cryptocurrency wallet and exchange platform where you can easily buy and sell a variety of cryptocurrencies. With features like web3 integration, SHA_WALLET provides a seamless and secure experience for managing your crypto assets. Learn more about how to use SHA_WALLET for your cryptocurrency transactions."},{"hid":"og:type","property":"og:type","content":"website"},{"hid":"og:site_name","property":"og:site_name","content":"ShaWallet"},{"hid":"og:title","property":"og:title","content":"ShaWallet | Smart Wallet For Buy And Sell CryptoCurrncy On WEB3 "},{"hid":"og:description","name":"og:description","content":"SHA_WALLETis a web3 -enabledcryptocurrency wallet and exchange platform that allows users to securely buy and sell various cryptocurrencies. DiscoverhowtouseSHA_WALLETfor seamless crypto transaction sandmanaging your digital assets. CopydescriptionSHA_WALLETisasecureanduser -friendlycryptocurrencywalletandexchangeplatform.Buyandsellvariouscryptocurrencieswith ease using SHA_WALLET s web3 integration and enjoy the benefits of a reliable and efficient trading experience. Start trading today!Copy descriptionSHA_WALLET isa secureand user - friendlycryptocurrency walletand exchangeplatform whereyou caneasily buyand sella varietyof cryptocurrencies.Withfeatures likeweb3 integration,SHA_WALLET providesa seamlessand secureexperiencefor managingyour cryptoassets.Learnmore abouthow touse SHA_WALLETfor yourcryptocurrency transactions"},{"hid":"og:url","property":"og:url","content":"https:\u002F\u002FShaWallet.com"},{"hid":"og:image","property":"og:image","content":"\u002Fog-image.jpg"},{"hid":"twitter:card","property":"twitter:card","content":"\u002Fog-image.jpg"},{"hid":"twitter:title","property":"twitter:title","content":"ShaWallet | Planters Without Borders"},{"hid":"og:locale:alternate","property":"og:locale:alternate","content":"en"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","type":"image\u002Fpng","href":"\u002Fapple-touch-icon.png"},{"rel":"icon","sizes":"32x32","type":"image\u002Fpng","href":"\u002Ffavicon-32x32.png"},{"rel":"icon","sizes":"16x16","type":"image\u002Fpng","href":"\u002Ffavicon-16x16.png"},{"rel":"browserconfig","href":"\u002Fbrowserconfig.xml"},{"rel":"mask-icon","href":"safari-pinned-tab.svg","color":"#FAF8F1"}],"style":[],"script":[]},
 
     store,
     router,
@@ -218,48 +216,40 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_4d3611ca === 'function') {
-    await nuxt_plugin_plugin_4d3611ca(app.context, inject)
+  if (typeof nuxt_plugin_plugin_ccc4d3e8 === 'function') {
+    await nuxt_plugin_plugin_ccc4d3e8(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_a97bf3c8 === 'function') {
-    await nuxt_plugin_bootstrapvue_a97bf3c8(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_0057e15e === 'function') {
+    await nuxt_plugin_bootstrapvue_0057e15e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginutils_85ca3dbe === 'function') {
-    await nuxt_plugin_pluginutils_85ca3dbe(app.context, inject)
+  if (typeof nuxt_plugin_pluginutils_2359394e === 'function') {
+    await nuxt_plugin_pluginutils_2359394e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginseo_3cb2a8b5 === 'function') {
-    await nuxt_plugin_pluginseo_3cb2a8b5(app.context, inject)
+  if (typeof nuxt_plugin_pluginrouting_5d087e64 === 'function') {
+    await nuxt_plugin_pluginrouting_5d087e64(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginrouting_d030aba8 === 'function') {
-    await nuxt_plugin_pluginrouting_d030aba8(app.context, inject)
+  if (typeof nuxt_plugin_pluginmain_0643a78b === 'function') {
+    await nuxt_plugin_pluginmain_0643a78b(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginmain_153150c3 === 'function') {
-    await nuxt_plugin_pluginmain_153150c3(app.context, inject)
+  if (process.client && typeof nuxt_plugin_workbox_2e07a7be === 'function') {
+    await nuxt_plugin_workbox_2e07a7be(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_workbox_25bd52c9 === 'function') {
-    await nuxt_plugin_workbox_25bd52c9(app.context, inject)
+  if (typeof nuxt_plugin_metaplugin_b0d75e5e === 'function') {
+    await nuxt_plugin_metaplugin_b0d75e5e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_metaplugin_0a1d236e === 'function') {
-    await nuxt_plugin_metaplugin_0a1d236e(app.context, inject)
+  if (typeof nuxt_plugin_iconplugin_a7881376 === 'function') {
+    await nuxt_plugin_iconplugin_a7881376(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_iconplugin_00cdd886 === 'function') {
-    await nuxt_plugin_iconplugin_00cdd886(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_axios_d21b3626 === 'function') {
-    await nuxt_plugin_axios_d21b3626(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_web3_276f1281 === 'function') {
-    await nuxt_plugin_web3_276f1281(app.context, inject)
+  if (typeof nuxt_plugin_axios_bf7119bc === 'function') {
+    await nuxt_plugin_axios_bf7119bc(app.context, inject)
   }
 
   // Lock enablePreview in context

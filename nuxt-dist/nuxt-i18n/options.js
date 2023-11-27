@@ -9,19 +9,19 @@ export const nuxtOptions = {
 export const options = {
   vueI18n: {},
   vueI18nLoader: false,
-  locales: [{"name":"English","code":"en","iso":"en-US","file":"en.js","dir":"ltr"},{"name":"Farsi","code":"fa","iso":"fa-FA","file":"fa.js","dir":"rtl"}],
-  defaultLocale: "en",
+  locales: [],
+  defaultLocale: "",
   defaultDirection: "ltr",
   routesNameSeparator: "___",
   defaultLocaleRouteNameSuffix: "default",
   sortRoutes: true,
   strategy: "prefix_except_default",
-  lazy: true,
-  langDir: "D:\\Projects\\ShaWallet\\ShaWallet\\lang",
+  lazy: false,
+  langDir: null,
   rootRedirect: null,
-  detectBrowserLanguage: false,
+  detectBrowserLanguage: {"alwaysRedirect":false,"cookieCrossOrigin":false,"cookieDomain":null,"cookieKey":"i18n_redirected","cookieSecure":false,"fallbackLocale":"","onlyOnNoPrefix":false,"onlyOnRoot":false,"useCookie":true},
   differentDomains: false,
-  seo: true,
+  seo: false,
   baseUrl: "",
   vuex: {"moduleName":"i18n","syncLocale":false,"syncMessages":false,"syncRouteParams":true},
   parsePages: true,
@@ -30,12 +30,8 @@ export const options = {
   beforeLanguageSwitch: () => null,
   onBeforeLanguageSwitch: () => {},
   onLanguageSwitched: () => null,
-  loadLanguagesAsync: true,
-  normalizedLocales: [{"name":"English","code":"en","iso":"en-US","file":"en.js","dir":"ltr"},{"name":"Farsi","code":"fa","iso":"fa-FA","file":"fa.js","dir":"rtl"}],
-  localeCodes: ["en","fa"],
+  normalizedLocales: [],
+  localeCodes: [],
 }
 
-export const localeMessages = {
-  'en.js': () => import('../..\\lang\\en.js' /* webpackChunkName: "lang-en.js" */),
-  'fa.js': () => import('../..\\lang\\fa.js' /* webpackChunkName: "lang-fa.js" */),
-}
+export const localeMessages = {}

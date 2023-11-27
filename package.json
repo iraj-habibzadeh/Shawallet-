@@ -13,17 +13,20 @@
     "@nuxtjs/pwa": "^3.3.5",
     "bootstrap": "^4.6.2",
     "bootstrap-vue": "^2.22.0",
+    "cookie": "^0.6.0",
     "core-js": "^3.25.3",
+    "currency-converter-lt": "^2.0.1",
     "nuxt": "^2.15.8",
+    "nuxt-i18n": "^6.13.9",
     "vue": "^2.7.10",
     "vue-extend-layout": "^2.0.6",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
     "web3": "^4.2.1",
-    "web3-eth": "^4.3.1",
-    "nuxt-i18n": "^6.13.9"
+    "web3-eth": "^4.3.1"
   },
   "devDependencies": {
+    "@nuxt/types": "~2.17.0",
     "sass": "^1.69.5",
     "sass-loader": "^10.4.1"
   }

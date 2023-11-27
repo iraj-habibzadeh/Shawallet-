@@ -1,58 +1,30 @@
 [
   {
-    "name": "bridge___en",
+    "name": "bridge",
     "path": "/bridge",
-    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\bridge.vue",
+    "component": "/home/iraj/Projects/Treejer/Shawallet-/pages/bridge.vue",
     "chunkName": "pages/bridge",
-    "_name": "_5e1f6182"
+    "_name": "_33ef54a4"
   },
   {
-    "name": "buyAndSell___en",
+    "name": "buyAndSell",
     "path": "/buyAndSell",
-    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\buyAndSell.vue",
+    "component": "/home/iraj/Projects/Treejer/Shawallet-/pages/buyAndSell.vue",
     "chunkName": "pages/buyAndSell",
-    "_name": "_a7b6ffce"
+    "_name": "_603491f0"
   },
   {
-    "name": "index___fa",
-    "path": "/fa",
-    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_6f25110c"
-  },
-  {
-    "name": "profile___en",
+    "name": "profile",
     "path": "/profile",
-    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\profile.vue",
+    "component": "/home/iraj/Projects/Treejer/Shawallet-/pages/profile.vue",
     "chunkName": "pages/profile",
-    "_name": "_339d0de3"
+    "_name": "_7cf45558"
   },
   {
-    "name": "bridge___fa",
-    "path": "/fa/bridge",
-    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\bridge.vue",
-    "chunkName": "pages/bridge",
-    "_name": "_5e1f6182"
-  },
-  {
-    "name": "buyAndSell___fa",
-    "path": "/fa/buyAndSell",
-    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\buyAndSell.vue",
-    "chunkName": "pages/buyAndSell",
-    "_name": "_a7b6ffce"
-  },
-  {
-    "name": "profile___fa",
-    "path": "/fa/profile",
-    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\profile.vue",
-    "chunkName": "pages/profile",
-    "_name": "_339d0de3"
-  },
-  {
-    "name": "index___en",
+    "name": "index",
     "path": "/",
-    "component": "D:\\\\Projects\\\\ShaWallet\\\\ShaWallet\\\\pages\\\\index.vue",
+    "component": "/home/iraj/Projects/Treejer/Shawallet-/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_6f25110c"
+    "_name": "_4ecb00bd"
   }
 ]

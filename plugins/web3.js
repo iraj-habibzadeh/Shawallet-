@@ -1,4 +1,4 @@
-// // import {Web3} from 'web3'
+// import {Web3} from 'web3'
 // // import RegularSale from '~/contracts/RegularSale'
 // // import Auction from  '~/contracts/Auction'
 // // import IncrementalSale from  '~/contracts/IncrementalSale'
@@ -18,8 +18,8 @@
 //         await instance.eth.net.getId().then(netId => {
 //             if (account || netId.toString() === process.env.NETWORK_ID.toString()) {
 //                 return;
-//             } 
-            
+//             }
+
 //             instance = new Web3(new Web3.providers.HttpProvider(process.env.WEB3_PROVIDER));
 //         })
 //     } else {

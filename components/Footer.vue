@@ -2,7 +2,7 @@
   <div class="footer" style="min-height: 5vh">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-12 menu">
+        <div class="col-md-8 col-12 menu">
           <b-nav>
             <NuxtLink to="/" class="nav-item">
               <span class="nav-link">Home</span>
@@ -23,7 +23,7 @@
             </NuxtLink>
           </b-nav>
         </div>
-        <div class="col-lg-4 col-12">
+        <div class="col-md-4 col-12">
           <Socials />
         </div>
       </div>
@@ -44,10 +44,12 @@ export default {
 <style lang="scss" scoped>
 .footer {
   width: 100%;
-  //height: 48px;
+  height: 7vh;
   background-color: #e5e7db;
   overflow-y: hidden;
-  position: relative;
+
+  position: fixed;
+  bottom: 0;
   ul {
     height: 100%;
   }

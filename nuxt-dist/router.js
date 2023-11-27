@@ -4,10 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _5e1f6182 = () => interopDefault(import('..\\pages\\bridge.vue' /* webpackChunkName: "pages/bridge" */))
-const _a7b6ffce = () => interopDefault(import('..\\pages\\buyAndSell.vue' /* webpackChunkName: "pages/buyAndSell" */))
-const _6f25110c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-const _339d0de3 = () => interopDefault(import('..\\pages\\profile.vue' /* webpackChunkName: "pages/profile" */))
+const _33ef54a4 = () => interopDefault(import('../pages/bridge.vue' /* webpackChunkName: "pages/bridge" */))
+const _603491f0 = () => interopDefault(import('../pages/buyAndSell.vue' /* webpackChunkName: "pages/buyAndSell" */))
+const _7cf45558 = () => interopDefault(import('../pages/profile.vue' /* webpackChunkName: "pages/profile" */))
+const _4ecb00bd = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -22,36 +22,20 @@ export const routerOptions = {
 
   routes: [{
     path: "/bridge",
-    component: _5e1f6182,
-    name: "bridge___en"
+    component: _33ef54a4,
+    name: "bridge"
   }, {
     path: "/buyAndSell",
-    component: _a7b6ffce,
-    name: "buyAndSell___en"
-  }, {
-    path: "/fa",
-    component: _6f25110c,
-    name: "index___fa"
+    component: _603491f0,
+    name: "buyAndSell"
   }, {
     path: "/profile",
-    component: _339d0de3,
-    name: "profile___en"
-  }, {
-    path: "/fa/bridge",
-    component: _5e1f6182,
-    name: "bridge___fa"
-  }, {
-    path: "/fa/buyAndSell",
-    component: _a7b6ffce,
-    name: "buyAndSell___fa"
-  }, {
-    path: "/fa/profile",
-    component: _339d0de3,
-    name: "profile___fa"
+    component: _7cf45558,
+    name: "profile"
   }, {
     path: "/",
-    component: _6f25110c,
-    name: "index___en"
+    component: _4ecb00bd,
+    name: "index"
   }],
 
   fallback: false

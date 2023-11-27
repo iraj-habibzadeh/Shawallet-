@@ -1,22 +1,21 @@
 <template>
-    <div class="sha-header  p-3">
-
-        <div class="logo">
-            <NuxtLink to="/">
-                <img src="../static/rainbow.svg" class="pointer-event img-logo" width="50" alt="logo">
-            </NuxtLink>
-        </div>
-        <div class="connect">
-            <button v-if="!account" class="btn-gray tr-gray-nine" @click.prevent="getAccount()">Connect Wallet</button>
-            <button v-if="account" class="btn-gray tr-gray-nine" @click.prevent="logOut()">LogOut</button>
-
-            <p class="param-sm tr-gray">Wallet: {{ account }}</p>
-        </div>
-        <div class="lang">
-            <Lang />
-        </div>
-
+  <div class="sha-header ml-2 mr-2  p-3">
+    <div class="logo">
+      <NuxtLink to="/">
+        <img alt="logo" class="pointer-event img-logo" src="logo.png" width="50">
+      </NuxtLink>
     </div>
+    <div class="connect">
+      <button v-if="!account" class="btn-gray tr-gray-nine" @click.prevent="getAccount()">Connect Wallet</button>
+      <button v-if="account" class="btn-gray tr-gray-nine" @click.prevent="logOut()">LogOut</button>
+
+      <p class="param-sm tr-gray">Wallet: {{ account }}</p>
+    </div>
+    <div class="lang">
+      <Lang/>
+    </div>
+
+  </div>
 </template>
 <script>
 
@@ -25,59 +24,96 @@ import Lang from '../components/Lang.vue';
 
 
 export default {
-    components: {
-        Lang
-    },
-
-    data() {
-        return {
-            account: null,
-
-        }
-    },
-
-    methods: {
-        web3Handler() {
-            if (typeof window.ethereum !== 'undefined') {
-                console.log('MetaMask is installed!');
-            } else {
-                window.ethereum.enable()
-            }
-
-        },
-        async getAccount() {
-            const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
-                .catch((err) => {
-                    if (err.code === 4001) {
-                        // EIP-1193 userRejectedRequest error
-                        // If this happens, the user rejected the connection request.
-                        console.log('Please connect to MetaMask.');
-                    } else {
-                        console.error(err);
-                    }
-                });
-            const account = accounts[0];
-            this.account = account;
-        },
+  components: {
+    Lang
+  },
 
 
+  data() {
+    return {
+      meta: {
+        title: `Buy And Sell Crypto OnChain ||  + ${this.$route.name}`,
+        description: 'Buy and sell cryptocurrency securely using SHA_WALLET on the WEB3 platform. Discover the benefits of this digital wallet, exchange, and learn how to navigate the world of cryptocurrencies.',
+        image: '',
+        pageName: this.$route.name
+      },
+      account: null,
+      loading: false,
+      srcCoin: require('assets/coin/0X0.png'),
+      coins: {
+        symbols: null,
+        currencess: null,
+        activeCoin: null,
+      }
+    }
+  },
+  head() {
+    return {
+      title: 'Buy And Sell Crypto OnChain || ' + this.$route.name || 'Home',
+      meta: [
+        {hid: 'description', name: 'description', content: this.meta.description},
+        {hid: 'keywords', name: 'keywords', content: 'SHA_WALLET,wallet,cryptocurrency,exchange,sha_walet,web3,'},
+        {hid: 'og:title', property: 'og:title', content: this.meta.title},
+        {hid: 'og:description', property: 'og:description', content: this.meta.description},
+        {hid: 'og:url', property: 'og:url', content: 'process.env.BASE_URL'},
+        {hid: 'og:image', property: 'og:image', content: './logo.png'},
+        {hid: 'twitter:title', property: 'twitter:title', content: this.meta.title},
+      ],
+    }
+  },
 
-
-
-
-       async logOut() {
-
-            await web3.currentProvider.disconnect()
-        },
-
-
-
+  methods: {
+    web3Handler() {
+      if (typeof window.ethereum !== 'undefined') {
+        console.log('MetaMask is installed!');
+      } else {
+        window.ethereum.enable()
+      }
 
     },
-    created() {
-        this.getAccount()
-    },
+    async getAccount() {
+      const accounts = await window.ethereum.request({method: 'eth_requestAccounts'})
+        .catch((err) => {
+          if (err.code === 4001) {
+            console.log('Please connect to MetaMask.');
+          } else {
+            console.error(err);
+          }
+        });
+      const account = accounts[0];
+      this.account = account;
+      document.cookie = `walletAddress=${this.account};expire=2024/12/01;path=/ `;
+      console.log(this.$t('sidebar.home'),this,document.cookie,document,"document.cookie is here")
+
+    }
+
+
+  },
+  created() {
+    this.getAccount()
+  }
 }
+
+
+</script>
+<style lang="scss">
+.sha-header {
+  display: flex;
+  justify-content: space-between;
+  height: 12.5vh;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+
+  img.img-logo {
+    margin-left: 15px;
+  }
+}
+
+
+</style>
 // const myProvider = '';
 // const httpProvider = new Web3.providers.HttpProvider(ganacheUrl);
 // const web3 = new Web3(httpProvider);
@@ -124,16 +160,3 @@ export default {
 //     // ...
 // })
 
-
-</script>
-<style lang="scss">
-.sha-header {
-
-    display: flex;
-    justify-content: space-between;
-
-    img.img-logo {
-        margin-left: 15px;
-    }
-}
-</style>
