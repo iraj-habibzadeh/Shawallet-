@@ -9,10 +9,10 @@
       <button v-if="!account" class="btn-gray tr-gray-nine" @click.prevent="getAccount()">Connect Wallet</button>
       <button v-if="account" class="btn-gray tr-gray-nine" @click.prevent="logOut()">LogOut</button>
 
-      <p class="param-sm tr-gray">Wallet: {{ account }}</p>
+      <p  class="param-sm tr-gray">Wallet: <span v-coin>{{ account }}</span> </p>
     </div>
     <div class="lang">
-      <Lang/>
+      <Lang />
     </div>
 
   </div>
@@ -51,13 +51,13 @@ export default {
     return {
       title: 'Buy And Sell Crypto OnChain || ' + this.$route.name || 'Home',
       meta: [
-        {hid: 'description', name: 'description', content: this.meta.description},
-        {hid: 'keywords', name: 'keywords', content: 'SHA_WALLET,wallet,cryptocurrency,exchange,sha_walet,web3,'},
-        {hid: 'og:title', property: 'og:title', content: this.meta.title},
-        {hid: 'og:description', property: 'og:description', content: this.meta.description},
-        {hid: 'og:url', property: 'og:url', content: 'process.env.BASE_URL'},
-        {hid: 'og:image', property: 'og:image', content: './logo.png'},
-        {hid: 'twitter:title', property: 'twitter:title', content: this.meta.title},
+        { hid: 'description', name: 'description', content: this.meta.description },
+        { hid: 'keywords', name: 'keywords', content: 'SHA_WALLET,wallet,cryptocurrency,exchange,sha_walet,web3,' },
+        { hid: 'og:title', property: 'og:title', content: this.meta.title },
+        { hid: 'og:description', property: 'og:description', content: this.meta.description },
+        { hid: 'og:url', property: 'og:url', content: 'process.env.BASE_URL' },
+        { hid: 'og:image', property: 'og:image', content: './logo.png' },
+        { hid: 'twitter:title', property: 'twitter:title', content: this.meta.title },
       ],
     }
   },
@@ -72,7 +72,7 @@ export default {
 
     },
     async getAccount() {
-      const accounts = await window.ethereum.request({method: 'eth_requestAccounts'})
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
         .catch((err) => {
           if (err.code === 4001) {
             console.log('Please connect to MetaMask.');
@@ -82,8 +82,11 @@ export default {
         });
       const account = accounts[0];
       this.account = account;
-      document.cookie = `walletAddress=${this.account};expire=2024/12/01;path=/ `;
-      console.log(this.$t('sidebar.home'),this,document.cookie,document,"document.cookie is here")
+      this.$cookies.set('account', this.account, {
+        path: '/',
+        maxAge: 363 * (1000 * 60 * 24),
+      });
+      console.log(this.$t('sidebar.home'), this.$cookies.get('account'), "document.cookie is here")
 
     }
 
@@ -111,8 +114,6 @@ export default {
     margin-left: 15px;
   }
 }
-
-
 </style>
 // const myProvider = '';
 // const httpProvider = new Web3.providers.HttpProvider(ganacheUrl);

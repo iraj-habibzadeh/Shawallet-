@@ -1,5 +1,6 @@
 <template>
   <div class="footer" style="min-height: 5vh">
+    
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-12 menu">
@@ -28,6 +29,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 

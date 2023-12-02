@@ -3,7 +3,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          WalletAddress:{{getCookie('walletAddress')}}
+          WalletAddress:
+          <p v-coin>{{$cookies.get('account')}}</p>
+        
 
         </div>
         <div class="col-12">

@@ -4,10 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _33ef54a4 = () => interopDefault(import('../pages/bridge.vue' /* webpackChunkName: "pages/bridge" */))
-const _603491f0 = () => interopDefault(import('../pages/buyAndSell.vue' /* webpackChunkName: "pages/buyAndSell" */))
-const _4ecb00bd = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
-const _7cf45558 = () => interopDefault(import('../pages/profile.vue' /* webpackChunkName: "pages/profile" */))
+const _7cf7f544 = () => interopDefault(import('..\\pages\\bridge.vue' /* webpackChunkName: "pages/bridge" */))
+const _21a20eb8 = () => interopDefault(import('..\\pages\\buyAndSell.vue' /* webpackChunkName: "pages/buyAndSell" */))
+const _3b7ac9e6 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _55801ba4 = () => interopDefault(import('..\\pages\\profile.vue' /* webpackChunkName: "pages/profile" */))
 
 const emptyFn = () => {}
 
@@ -22,35 +22,35 @@ export const routerOptions = {
 
   routes: [{
     path: "/bridge",
-    component: _33ef54a4,
+    component: _7cf7f544,
     name: "bridge___en"
   }, {
     path: "/buyAndSell",
-    component: _603491f0,
+    component: _21a20eb8,
     name: "buyAndSell___en"
   }, {
     path: "/fa",
-    component: _4ecb00bd,
+    component: _3b7ac9e6,
     name: "index___fa"
   }, {
     path: "/profile",
-    component: _7cf45558,
+    component: _55801ba4,
     name: "profile___en"
   }, {
     path: "/fa/bridge",
-    component: _33ef54a4,
+    component: _7cf7f544,
     name: "bridge___fa"
   }, {
     path: "/fa/buyAndSell",
-    component: _603491f0,
+    component: _21a20eb8,
     name: "buyAndSell___fa"
   }, {
     path: "/fa/profile",
-    component: _7cf45558,
+    component: _55801ba4,
     name: "profile___fa"
   }, {
     path: "/",
-    component: _4ecb00bd,
+    component: _3b7ac9e6,
     name: "index___en"
   }],
 

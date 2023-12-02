@@ -8,38 +8,38 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'ShaWallet | Smart Wallet For Buy And Sell CryptoCurrncy On WEB3 ', meta: [{charset: 'utf-8'}, // { name: 'google-site-verification', content: 'tASRdlQWe-O2j5boAlfazXb4-CEyAUfCwx_30gA383U' },
-      {hid: 'content', name: 'content', content: 'ShaWallet website content'}, {
-        hid: 'robots', name: 'robots', content: 'width=device-width, initial-scale=1'
-      }, {hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: '#FAF8F1'}, {
-        hid: 'theme-color', name: 'theme-color', content: '#FAF8F1'
-      }, {hid: 'keywords', name: 'keywords', content: 'SHA_WALLET,wallet,cryptocurrency,exchange,sha_walet,web3,'}, {
-        hid: 'description',
-        name: 'description',
-        content: 'SHA_WALLET is a secure and user-friendly cryptocurrency wallet and exchange platform. Buy and sell various cryptocurrencies with ease using SHA_WALLET\'s web3 integration and enjoy the benefits of a reliable and efficient trading experience. Start trading today!,SHA_WALLET is a secure and user-friendly cryptocurrency wallet and exchange platform where you can easily buy and sell a variety of cryptocurrencies. With features like web3 integration, SHA_WALLET provides a seamless and secure experience for managing your crypto assets. Learn more about how to use SHA_WALLET for your cryptocurrency transactions.'
-      }, {hid: 'og:type', property: 'og:type', content: 'website'}, {
-        hid: 'og:site_name', property: 'og:site_name', content: 'ShaWallet'
-      }, {
-        hid: 'og:title',
-        property: 'og:title',
-        content: 'ShaWallet | Smart Wallet For Buy And Sell CryptoCurrncy On WEB3 '
-      }, {
-        hid: 'og:description',
-        name: 'og:description',
-        content: 'SHA_WALLETis a web3 -enabledcryptocurrency wallet and exchange platform that allows users to securely buy and sell various cryptocurrencies. DiscoverhowtouseSHA_WALLETfor seamless crypto transaction sandmanaging your digital assets. CopydescriptionSHA_WALLETisasecureanduser -friendlycryptocurrencywalletandexchangeplatform.Buyandsellvariouscryptocurrencieswith ease using SHA_WALLET s web3 integration and enjoy the benefits of a reliable and efficient trading experience. Start trading today!Copy descriptionSHA_WALLET isa secureand user - friendlycryptocurrency walletand exchangeplatform whereyou caneasily buyand sella varietyof cryptocurrencies.Withfeatures likeweb3 integration,SHA_WALLET providesa seamlessand secureexperiencefor managingyour cryptoassets.Learnmore abouthow touse SHA_WALLETfor yourcryptocurrency transactions',
-      }, {hid: 'og:url', property: 'og:url', content: 'https://ShaWallet.com'}, {
-        hid: 'og:image', property: 'og:image', content: '/og-image.jpg'
-      }, {
-        hid: 'twitter:card', property: 'twitter:card', content: '/og-image.jpg'
-      }, {
-        hid: 'twitter:title', property: 'twitter:title', content: 'ShaWallet | Planters Without Borders'
-      }, {
-        hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'en'
-      }],
+    title: 'ShaWallet | Smart Wallet For Buy And Sell CryptoCurrncy On WEB3 ', meta: [{ charset: 'utf-8' }, // { name: 'google-site-verification', content: 'tASRdlQWe-O2j5boAlfazXb4-CEyAUfCwx_30gA383U' },
+    { hid: 'content', name: 'content', content: 'ShaWallet website content' }, {
+      hid: 'robots', name: 'robots', content: 'width=device-width, initial-scale=1'
+    }, { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: '#FAF8F1' }, {
+      hid: 'theme-color', name: 'theme-color', content: '#FAF8F1'
+    }, { hid: 'keywords', name: 'keywords', content: 'SHA_WALLET,wallet,cryptocurrency,exchange,sha_walet,web3,' }, {
+      hid: 'description',
+      name: 'description',
+      content: 'SHA_WALLET is a secure and user-friendly cryptocurrency wallet and exchange platform. Buy and sell various cryptocurrencies with ease using SHA_WALLET\'s web3 integration and enjoy the benefits of a reliable and efficient trading experience. Start trading today!,SHA_WALLET is a secure and user-friendly cryptocurrency wallet and exchange platform where you can easily buy and sell a variety of cryptocurrencies. With features like web3 integration, SHA_WALLET provides a seamless and secure experience for managing your crypto assets. Learn more about how to use SHA_WALLET for your cryptocurrency transactions.'
+    }, { hid: 'og:type', property: 'og:type', content: 'website' }, {
+      hid: 'og:site_name', property: 'og:site_name', content: 'ShaWallet'
+    }, {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'ShaWallet | Smart Wallet For Buy And Sell CryptoCurrncy On WEB3 '
+    }, {
+      hid: 'og:description',
+      name: 'og:description',
+      content: 'SHA_WALLETis a web3 -enabledcryptocurrency wallet and exchange platform that allows users to securely buy and sell various cryptocurrencies. DiscoverhowtouseSHA_WALLETfor seamless crypto transaction sandmanaging your digital assets. CopydescriptionSHA_WALLETisasecureanduser -friendlycryptocurrencywalletandexchangeplatform.Buyandsellvariouscryptocurrencieswith ease using SHA_WALLET s web3 integration and enjoy the benefits of a reliable and efficient trading experience. Start trading today!Copy descriptionSHA_WALLET isa secureand user - friendlycryptocurrency walletand exchangeplatform whereyou caneasily buyand sella varietyof cryptocurrencies.Withfeatures likeweb3 integration,SHA_WALLET providesa seamlessand secureexperiencefor managingyour cryptoassets.Learnmore abouthow touse SHA_WALLETfor yourcryptocurrency transactions',
+    }, { hid: 'og:url', property: 'og:url', content: 'https://ShaWallet.com' }, {
+      hid: 'og:image', property: 'og:image', content: '/og-image.jpg'
+    }, {
+      hid: 'twitter:card', property: 'twitter:card', content: '/og-image.jpg'
+    }, {
+      hid: 'twitter:title', property: 'twitter:title', content: 'ShaWallet | Planters Without Borders'
+    }, {
+      hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'en'
+    }],
 
-    link: [{rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png', href: '/apple-touch-icon.png'}, {
+    link: [{ rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png', href: '/apple-touch-icon.png' }, {
       rel: 'icon', sizes: '32x32', type: 'image/png', href: '/favicon-32x32.png'
-    }, {rel: 'icon', sizes: '16x16', type: 'image/png', href: '/favicon-16x16.png'}, {
+    }, { rel: 'icon', sizes: '16x16', type: 'image/png', href: '/favicon-16x16.png' }, {
       rel: 'browserconfig',
       href: '/browserconfig.xml'
     }, {
@@ -52,15 +52,20 @@ export default {
     boxShadow: 'rgba(0, 0, 0, 0.1) 0px 8px 16px'
   },
 
-// Global CSS: https://go.nuxtjs.dev/config-css
+  // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/main.scss'],
 
-  middleware: [], router: {
+  middleware: [
+    { src: '', }
+  ]
+  , router: {
     linkActiveClass: 'active-link'
   },
 
-// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  plugins: [
+    { src: '~plugins/accountSlice.js', ssr: false }
+  ],
   // {src: '~plugins/web3.js', ssr: false}
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -77,7 +82,7 @@ export default {
   modules: [// https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt', // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios', // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa', 'nuxt-i18n'],
+    '@nuxtjs/pwa', 'nuxt-i18n', 'cookie-universal-nuxt'],
   sitemap: {
     hostname: 'https://www.shawallet.com', gzip: true, sitemaps: [
       {
@@ -125,7 +130,7 @@ export default {
     baseURL: '/'
   },
 
-// PWA module configuration: https://go.nuxtjs.dev/pwa
+  // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
       lang: 'en'
@@ -160,7 +165,7 @@ export default {
   },
 
 
-// Build Configuration: https://go.nuxtjs.dev/config-build
+  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
 
 }

@@ -17,7 +17,7 @@ export const options = {
   sortRoutes: true,
   strategy: "prefix_except_default",
   lazy: true,
-  langDir: "/home/iraj/Projects/Treejer/Shawallet-/lang",
+  langDir: "D:\\Projects\\ShaWallet\\Shawallet-\\lang",
   rootRedirect: null,
   detectBrowserLanguage: false,
   differentDomains: false,
@@ -36,6 +36,6 @@ export const options = {
 }
 
 export const localeMessages = {
-  'en.js': () => import('../../lang/en.js' /* webpackChunkName: "lang-en.js" */),
-  'fa.js': () => import('../../lang/fa.js' /* webpackChunkName: "lang-fa.js" */),
+  'en.js': () => import('../..\\lang\\en.js' /* webpackChunkName: "lang-en.js" */),
+  'fa.js': () => import('../..\\lang\\fa.js' /* webpackChunkName: "lang-fa.js" */),
 }

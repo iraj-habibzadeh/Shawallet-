@@ -2,60 +2,16 @@
   <div :id="$route.name" class="position-relative wrapper">
     <div class="container">
       <div class="row">
-        <div v-if="coins.currencess" class="col-12 text-capitalize sha-active-box">
-
-          <h2 class="tr-gray-four"><span>active Coin:</span> <span>{{ coins.activeCoin || 'LTCBTC' }}</span></h2>
-
-          <h2 class="tr-gray-four"><span>priceUSD:</span> <span>{{
-              !coins.currencess.price ? '...Loading' : '$' + coins.currencess.price
-            }}</span></h2>
-          <h2 class="tr-gray-four"><span>priceIRR:</span> <span>{{
-              !coins.currencess.price ? '...Loading' : Number(coins.currencess.price) * 420000
-            }}</span></h2>
-
-          <!--          <h1 class="tr-gray-four">-->
-          <!--            <span>time:</span><span-->
-          <!--            v-if="coins.currencess.timestamp">{{-->
-          <!--              new Date(coins.currencess.timestamp * 1000).toLocaleDateString('en-US', {-->
-          <!--                day: '2-digit',-->
-          <!--                month: '2-digit',-->
-          <!--                year: 'numeric',-->
-          <!--              })-->
-          <!--            }}</span>-->
-          <!--          </h1>-->
-        </div>
         <div class="col-12 sha-currency-table ">
           <script src="../plugins/coinMarketTicker.js"></script>
-          <coingecko-coin-market-ticker-list-widget class="mt-3 border-0 index-widget" coin-id="bitcoin" currency="usd"
-                                                    locale="en"></coingecko-coin-market-ticker-list-widget>
-          <!--          <b-form-input-->
-          <!--            v-model="coins.activeCoin" list="my-list-id"-->
-          <!--            @change="setActiveToken(coins.activeCoin)" @keyup.enter="setActiveToken(coins.activeCoin)"></b-form-input>-->
-          <!--          <datalist id="my-list-id" class="mb-2 btn-gray border-0">-->
-          <!--            <option>LTCBTC</option>-->
-
-
-          <!--            <option v-for="(item,index) in coins.symbols" :key="index"><span>{{ item }}</span>-->
-          <!--            </option>-->
-          <!--          </datalist>-->
-          <div v-for="(item,index) in coins.symbols" class="card-group">
-            <!--            <img class="poiner-event" @click.prevent="setActiveToken(item)"-->
-
-            <!--                 :src="srcCoin+item.replace(/usd|[1-9]|USD|USDT/g,'')+'.png'" :alt="item"/>-->
-
-
-            <p :class=" coins.activeCoin === item ? 'active-coin font-weight-bolder' : ''"
-               class="card-body card-text param tr-gray-four poiner-event param-18"
-               @click.prevent="setActiveToken(item)">
-              {{ index + '-' }} <span class="tr-gray-three font-weight-bolder">{{ item }}</span></p>
-
-          </div>
-
+          <script src="https://widgets.coingecko.com/coingecko-coin-market-ticker-list-widget.js"></script>
+          <coingecko-coin-market-ticker-list-widget coin-id="bitcoin" currency="usd" 
+            background-color="rgba(255, 255, 255, 0.2)" locale="en"></coingecko-coin-market-ticker-list-widget>
         </div>
       </div>
     </div>
   </div>
-</template>
+</div></div></template>
 
 <script>
 
@@ -87,13 +43,13 @@ export default {
     return {
       title: 'Buy And Sell Crypto OnChain || ' + this.$route.name,
       meta: [
-        {hid: 'description', name: 'description', content: this.meta.description},
-        {hid: 'keywords', name: 'keywords', content: 'SHA_WALLET,wallet,cryptocurrency,exchange,sha_walet,web3,'},
-        {hid: 'og:title', property: 'og:title', content: this.meta.title},
-        {hid: 'og:description', property: 'og:description', content: this.meta.description},
-        {hid: 'og:url', property: 'og:url', content: ''},
-        {hid: 'og:image', property: 'og:image', content: 'mstile-150x150.png'},
-        {hid: 'twitter:title', property: 'twitter:title', content: ''},
+        { hid: 'description', name: 'description', content: this.meta.description },
+        { hid: 'keywords', name: 'keywords', content: 'SHA_WALLET,wallet,cryptocurrency,exchange,sha_walet,web3, ' },
+        { hid: 'og:title', property: 'og:title', content: this.meta.title },
+        { hid: 'og:description', property: 'og:description', content: this.meta.description },
+        { hid: 'og:url', property: 'og:url', content: ' ' },
+        { hid: 'og:image', property: 'og:image', content: 'mstile-150x150.png ' },
+        { hid: 'twitter:title', property: 'twitter:title', content: ' ' },
       ]
 
 
@@ -106,43 +62,42 @@ export default {
   },
   methods: {
 
-    async getCurrency() {
-      this.loading = true
-      let url = `https://api.api-ninjas.com/v1/cryptoprice?symbol=${!this.coins.activeCoin ? 'LTCBTC' : this.coins.activeCoin}`;
-      await this.$axios.$get(url).then((res) => {
-        this.coins.currencess = res.data
-        this.loading = false
+    // async getCurrency() {
+    //   this.loading = true
+    //   let url = `https://api.api-ninjas.com/v1/cryptoprice?symbol=${!this.coins.activeCoin ? 'LTCBTC' : this.coins.activeCoin}`;
+    //   await this.$axios.$get(url).then((res) => {
+    //     this.coins.currencess = res.data
+    //     this.loading = false
 
-      }).catch((err) => {
-        this.$loading.failed();
-        console.log(err, "err")
-      })
-    },
-    async getSymbols() {
-      this.loading = true
+    //   }).catch((err) => {
+    //     this.$loading.failed();
+    //     console.log(err, "err")
+    //   })
+    // },
+    // async getSymbols() {
+    //   this.loading = true
 
-      let url = 'https://api.api-ninjas.com/v1/cryptosymbols';
-      await this.$axios.$get(url).then((res) => {
-        this.coins.symbols = res.data.symbols;
-        this.loading = false
+    //   let url = 'https://api.api-ninjas.com/v1/cryptosymbols';
+    //   await this.$axios.$get(url).then((res) => {
+    //     this.coins.symbols = res.data.symbols;
+    //     this.loading = false
 
-      }).catch(err => {
-        this.$loading.failed();
+    //   }).catch(err => {
+    //     this.$loading.failed();
 
-        console.log(err)
-      })
-    },
+    //     console.log(err)
+    //   })
+    // },
 
-    async setActiveToken(item) {
-      this.coins.activeCoin = await item
-      await this.getCurrency()
+    // async setActiveToken(item) {
+    //   this.coins.activeCoin = await item
+    //   await this.getCurrency()
 
-    }
+    // }
   }
 }
 </script>
 <style lang="scss">
-
 .wrapper {
 
 
@@ -172,6 +127,7 @@ export default {
 
   }
 }
+</style>
 
 
 </style>
