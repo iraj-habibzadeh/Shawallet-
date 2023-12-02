@@ -5,10 +5,10 @@
 
       <!-- <img :src="" alt=""> -->
     </div>
-    <div class="drop-down-box box-shadow p-2 " :class="$i18n.locale === 'fa' ? 'dir-rtl' : 'dir-ltr'" v-if="langBox"
+    <div v-if="langBox" :class="$i18n.locale === 'fa' ? 'dir-rtl' : 'dir-ltr'" class="drop-down-box box-shadow p-2 "
          @mouseleave="langBox =false">
-      <NuxtLink class="param tr-gray-four" :to="switchLocalePath('en')">English</NuxtLink>
-      <NuxtLink class="param tr-gray-four" :to="switchLocalePath('fa')">Farsi</NuxtLink>
+      <NuxtLink :to="switchLocalePath('en')" class="param tr-gray-four">English</NuxtLink>
+      <NuxtLink :to="switchLocalePath('fa')" class="param tr-gray-four">Farsi</NuxtLink>
     </div>
 
   </div>
@@ -41,6 +41,7 @@ export default {
     position: absolute;
     left: -50px;
     top: 20px;
+    z-index: +99;
 
     a {
       display: block;
@@ -52,6 +53,7 @@ export default {
 
   .drop-down-box.dir-rtl {
     left: 0;
+    z-index: +99;
   }
 }
 </style>

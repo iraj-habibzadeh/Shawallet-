@@ -43,6 +43,9 @@ export default {
     Footer,
 
   },
+  created(){
+    this.$i18n.messages.default
+  },
 
   methods: {}
 }

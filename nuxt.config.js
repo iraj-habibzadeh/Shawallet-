@@ -1,7 +1,6 @@
 require('dotenv').config()
 
 
-console.log(this,process, "this is here")
 
 export default {
   buildDir: 'nuxt-dist', // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -80,81 +79,88 @@ export default {
     '@nuxtjs/axios', // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa', 'nuxt-i18n'],
   sitemap: {
-    hostname: 'https://www.shawallet.com', gzip: true, sitemaps: [{
-      path: '/sitemap-static.xml', exclude: ['/profile', '/*', '/buyAndSell/'], routes: [{
-        url: '/', changefreq: 'monthly', priority: 1
-      }, {
-        url: '/profile', changefreq: 'monthly', priority: 0.9
-      }, {
-        url: '/partnerships', changefreq: 'monthly', priority: 0.8
-      }, {
-        url: '/buyAndSell', changefreq: 'monthly', priority: 0.8
-      }, {
-        url: '/bridge', changefreq: 'monthly', priority: 0.7
-      }, {
-        url: 'https://www.treejer.com/contact',
-        changefreq: 'monthly',
-        priority: 0.7,
-        lastmod: '2022-01-19T13:30:00.000Z'
-      }]
-    }, {
-      path: '/sitemap-shawallet.xml', exclude: ['/**'] //exlcude all static routes
-    }], fontawesome: {
-      component: 'fa', imports: [{
-        set: '@fortawesome/free-solid-svg-icons', // Solid icons
-        icons: ['faEye', 'faPlaneDeparture', 'faExternalLinkAlt', 'faLifeRing', 'faTrophy', 'faBell', 'faTree', 'faCalendarAlt', 'faCaretDown', 'faBars', 'faCaretRight', 'faTimes', 'faAngleRight', 'faPhoneSquareAlt', 'faEnvelope', 'faAngleDown', 'faArrowCircleDown', 'faArrowCircleUp', 'faUser', 'faShoppingCart', 'faSearch', 'faUsers', 'faAngleDoubleDown', 'faAngleDoubleUp']
-      }, {
-        set: '@fortawesome/free-brands-svg-icons', // Brand icons
-        icons: ['faEthereum', 'faCcStripe', 'faCcVisa', 'faFacebook', 'faInstagram', 'faTelegram', 'faWhatsapp', 'faTwitter', 'faLinkedinIn']
-      }]
-    }, // Axios module configuration: https://go.nuxtjs.dev/config-axios
-    axios: {
-      headers: {
-        common: {
-          'Accept': 'application/json, text/plain, */*',
-          'Access-Control-Allow-Origin': '*/*',
-          'X-Api-Key': 't2f/bU44LyupidAIsia8oQ==gSnkftcWN8KxroAH',
-          'X-CMC_PRO_API_KEY': '97b04997-62c8-4f3a-a922-c08b03a06832'
-        }
-      },
+    hostname: 'https://www.shawallet.com', gzip: true, sitemaps: [
+      {
+        path: '/sitemap-static.xml', exclude: ['/profile', '/*', '/buyAndSell/'], routes: [{
+          url: '/', changefreq: 'monthly', priority: 1
+        }, {
+          url: '/profile', changefreq: 'monthly', priority: 0.9
+        }, {
+          url: '/partnerships', changefreq: 'monthly', priority: 0.8
+        }, {
+          url: '/buyAndSell', changefreq: 'monthly', priority: 0.8
+        }, {
+          url: '/bridge', changefreq: 'monthly', priority: 0.7
+        }, {
+          url: 'https://www.treejer.com/contact',
+          changefreq: 'monthly',
+          priority: 0.7,
+          lastmod: '2022-01-19T13:30:00.000Z'
+        }]
 
-      // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-      baseURL: '/'
+      }, {
+        path: '/sitemap-shawallet.xml', exclude: ['/**'] //exlcude all static routes
+      }]
+  },
+  fontawesome: {
+    component: 'fa', imports: [{
+      set: '@fortawesome/free-solid-svg-icons', // Solid icons
+      icons: ['faEye', 'faPlaneDeparture', 'faExternalLinkAlt', 'faLifeRing', 'faTrophy', 'faBell', 'faTree', 'faCalendarAlt', 'faCaretDown', 'faBars', 'faCaretRight', 'faTimes', 'faAngleRight', 'faPhoneSquareAlt', 'faEnvelope', 'faAngleDown', 'faArrowCircleDown', 'faArrowCircleUp', 'faUser', 'faShoppingCart', 'faSearch', 'faUsers', 'faAngleDoubleDown', 'faAngleDoubleUp']
+    }, {
+      set: '@fortawesome/free-brands-svg-icons', // Brand icons
+      icons: ['faEthereum', 'faCcStripe', 'faCcVisa', 'faFacebook', 'faInstagram', 'faTelegram', 'faWhatsapp', 'faTwitter', 'faLinkedinIn']
+    }]
+  }, // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    headers: {
+      common: {
+        'Accept': 'application/json, text/plain, */*',
+        'Access-Control-Allow-Origin': '*/*',
+        'X-Api-Key': 't2f/bU44LyupidAIsia8oQ==gSnkftcWN8KxroAH',
+        'X-CMC_PRO_API_KEY': '97b04997-62c8-4f3a-a922-c08b03a06832'
+      }
     },
+
+    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    baseURL: '/'
+  },
 
 // PWA module configuration: https://go.nuxtjs.dev/pwa
-    pwa: {
-      manifest: {
-        lang: 'en'
-      }
-    }, i18n: {
-      locales: [{
-        name: 'English', code: 'en', iso: 'en-US', file: 'en.js', dir: 'ltr'
-      }, {
-        name: 'Farsi', code: 'fa', iso: 'fa-FA', file: 'fa.js', dir: 'rtl'
-      }
-        // {
-        //   name: 'Turkish',
-        //   code: 'tr',
-        //   iso: 'tr-TR',
-        //   file: 'tr.js'
-        // },
-        // {
-        //   name: 'Arabic',
-        //   code: 'ar',
-        //   iso: 'ar-AR',
-        //   file: 'ar.js'
-        // }
-      ],
-      defaultLocale: 'en',
-      loadLanguagesAsync: true,
-      lazy: true,
-      seo: true,
-      langDir: 'lang/',
-      detectBrowserLanguage: false
-    },
+  pwa: {
+    manifest: {
+      lang: 'en'
+    }
+  },
+  i18n: {
+    defaultLocale: 'en',
+
+    locales: [{
+      name: 'English', code: 'en', iso: 'en-US', file: 'en.js', dir: 'ltr'
+    }, {
+      name: 'Farsi', code: 'fa', iso: 'fa-FA', file: 'fa.js', dir: 'rtl'
+    }
+      // {
+      //   name: 'Turkish',
+      //   code: 'tr',
+      //   iso: 'tr-TR',
+      //   file: 'tr.js'
+      // },
+      // {
+      //   name: 'Arabic',
+      //   code: 'ar',
+      //   iso: 'ar-AR',
+      //   file: 'ar.js'
+      // }
+    ],
+    loadLanguagesAsync: true,
+    lazy: true,
+    seo: true,
+    langDir: 'lang/',
+    detectBrowserLanguage: false
+  },
+
 
 // Build Configuration: https://go.nuxtjs.dev/config-build
-    build: {}
-  }
+  build: {}
+
 }

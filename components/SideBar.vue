@@ -6,8 +6,6 @@
       {{ show ? 'X' : ' ☰' }}
     </div>
     <div class="sha-sidebar-box">
-      <h1>{{ $t('sidebar.home') }}</h1>
-      
       <ul class="list-style-none">
         <li v-for="(item, index) in menus" :id="index" :key="index" class="pointer-event ">
           <NuxtLink :class="$store.state.sidebar ? 'param-lg' : 'param-md'" :to="localePath(item.to)"
@@ -56,6 +54,8 @@ export default {
       self.show = !self.show;
       await self.$store.commit('SET_SIDEBAR', self.show)
     }
+  },
+  created() {
   }
 }
 </script>

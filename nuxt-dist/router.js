@@ -6,8 +6,8 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _33ef54a4 = () => interopDefault(import('../pages/bridge.vue' /* webpackChunkName: "pages/bridge" */))
 const _603491f0 = () => interopDefault(import('../pages/buyAndSell.vue' /* webpackChunkName: "pages/buyAndSell" */))
-const _7cf45558 = () => interopDefault(import('../pages/profile.vue' /* webpackChunkName: "pages/profile" */))
 const _4ecb00bd = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _7cf45558 = () => interopDefault(import('../pages/profile.vue' /* webpackChunkName: "pages/profile" */))
 
 const emptyFn = () => {}
 
@@ -23,19 +23,35 @@ export const routerOptions = {
   routes: [{
     path: "/bridge",
     component: _33ef54a4,
-    name: "bridge"
+    name: "bridge___en"
   }, {
     path: "/buyAndSell",
     component: _603491f0,
-    name: "buyAndSell"
+    name: "buyAndSell___en"
+  }, {
+    path: "/fa",
+    component: _4ecb00bd,
+    name: "index___fa"
   }, {
     path: "/profile",
     component: _7cf45558,
-    name: "profile"
+    name: "profile___en"
+  }, {
+    path: "/fa/bridge",
+    component: _33ef54a4,
+    name: "bridge___fa"
+  }, {
+    path: "/fa/buyAndSell",
+    component: _603491f0,
+    name: "buyAndSell___fa"
+  }, {
+    path: "/fa/profile",
+    component: _7cf45558,
+    name: "profile___fa"
   }, {
     path: "/",
     component: _4ecb00bd,
-    name: "index"
+    name: "index___en"
   }],
 
   fallback: false

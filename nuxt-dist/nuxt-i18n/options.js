@@ -9,19 +9,19 @@ export const nuxtOptions = {
 export const options = {
   vueI18n: {},
   vueI18nLoader: false,
-  locales: [],
-  defaultLocale: "",
+  locales: [{"name":"English","code":"en","iso":"en-US","file":"en.js","dir":"ltr"},{"name":"Farsi","code":"fa","iso":"fa-FA","file":"fa.js","dir":"rtl"}],
+  defaultLocale: "en",
   defaultDirection: "ltr",
   routesNameSeparator: "___",
   defaultLocaleRouteNameSuffix: "default",
   sortRoutes: true,
   strategy: "prefix_except_default",
-  lazy: false,
-  langDir: null,
+  lazy: true,
+  langDir: "/home/iraj/Projects/Treejer/Shawallet-/lang",
   rootRedirect: null,
-  detectBrowserLanguage: {"alwaysRedirect":false,"cookieCrossOrigin":false,"cookieDomain":null,"cookieKey":"i18n_redirected","cookieSecure":false,"fallbackLocale":"","onlyOnNoPrefix":false,"onlyOnRoot":false,"useCookie":true},
+  detectBrowserLanguage: false,
   differentDomains: false,
-  seo: false,
+  seo: true,
   baseUrl: "",
   vuex: {"moduleName":"i18n","syncLocale":false,"syncMessages":false,"syncRouteParams":true},
   parsePages: true,
@@ -30,8 +30,12 @@ export const options = {
   beforeLanguageSwitch: () => null,
   onBeforeLanguageSwitch: () => {},
   onLanguageSwitched: () => null,
-  normalizedLocales: [],
-  localeCodes: [],
+  loadLanguagesAsync: true,
+  normalizedLocales: [{"name":"English","code":"en","iso":"en-US","file":"en.js","dir":"ltr"},{"name":"Farsi","code":"fa","iso":"fa-FA","file":"fa.js","dir":"rtl"}],
+  localeCodes: ["en","fa"],
 }
 
-export const localeMessages = {}
+export const localeMessages = {
+  'en.js': () => import('../../lang/en.js' /* webpackChunkName: "lang-en.js" */),
+  'fa.js': () => import('../../lang/fa.js' /* webpackChunkName: "lang-fa.js" */),
+}

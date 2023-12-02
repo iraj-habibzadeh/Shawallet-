@@ -25,16 +25,19 @@
           <!--          </h1>-->
         </div>
         <div class="col-12 sha-currency-table ">
-          <b-form-input
-            v-model="coins.activeCoin" list="my-list-id"
-            @change="setActiveToken(coins.activeCoin)" @keyup.enter="setActiveToken(coins.activeCoin)"></b-form-input>
-          <datalist id="my-list-id" class="mb-2 btn-gray border-0">
-            <option>LTCBTC</option>
+          <script src="../plugins/coinMarketTicker.js"></script>
+          <coingecko-coin-market-ticker-list-widget class="mt-3 border-0 index-widget" coin-id="bitcoin" currency="usd"
+                                                    locale="en"></coingecko-coin-market-ticker-list-widget>
+          <!--          <b-form-input-->
+          <!--            v-model="coins.activeCoin" list="my-list-id"-->
+          <!--            @change="setActiveToken(coins.activeCoin)" @keyup.enter="setActiveToken(coins.activeCoin)"></b-form-input>-->
+          <!--          <datalist id="my-list-id" class="mb-2 btn-gray border-0">-->
+          <!--            <option>LTCBTC</option>-->
 
 
-            <option v-for="(item,index) in coins.symbols" :key="index"><span>{{ item }}</span>
-            </option>
-          </datalist>
+          <!--            <option v-for="(item,index) in coins.symbols" :key="index"><span>{{ item }}</span>-->
+          <!--            </option>-->
+          <!--          </datalist>-->
           <div v-for="(item,index) in coins.symbols" class="card-group">
             <!--            <img class="poiner-event" @click.prevent="setActiveToken(item)"-->
 
@@ -164,7 +167,9 @@ export default {
 
   .sha-currency-table {
     overflow: scroll;
-    height: 50vh;
+    min-height: 50vh;
+
+
   }
 }
 

@@ -80,20 +80,23 @@ body {
   min-height: 100vh;
 
 }
-.bg-glass{
-  border: 1px solid rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.2);
+
+.bg-glass {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  box-shadow: rgba(0,0,0,0.1);
+  box-shadow: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
 }
-coingecko-coin-price-marquee-widget{
-  border: 1px solid rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.2);
+
+coingecko-coin-price-marquee-widget {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  box-shadow: rgba(0,0,0,0.1);
+  box-shadow: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
 }
+
 .sha-wrapper {
   height: 77vh;
   overflow-y: scroll;
@@ -110,9 +113,11 @@ coingecko-coin-price-marquee-widget{
 .page-leave-to {
   opacity: 0;
 }
-*{
-  border:none;
+
+* {
+  border: none;
 }
+
 *,
 *:before,
 *:after {
@@ -141,7 +146,7 @@ input {
   font-family: Montserrat-Regular;
 }
 
-.div,iframe, {
+.div, iframe, {
 }
 
 .disabled:hover {
@@ -174,9 +179,10 @@ input {
   }
 }
 
-.wrapper{
+.wrapper {
   font-family: Monoton;
 }
+
 .param {
   font-size: 14px;
   font-weight: 500;
@@ -299,6 +305,13 @@ input {
   cursor: pointer;
 }
 
+.index-widget {
+  .cg-container {
+    border: none;
+    background-color: transparent !important;
+  }
+
+}
 
 @media (min-width: 1281px) {
   //CSS
